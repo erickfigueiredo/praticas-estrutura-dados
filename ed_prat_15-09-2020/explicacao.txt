@@ -1,0 +1,7 @@
+• dynamic_cast: Converte um ponteiro de classe básica em um ponteiro de classe derivada. Se um objeto subjacente for do 
+tipo derivado, será executada a coerção. Do contrário, será atribuído 0.
+
+• typeid: Retorna uma referência a um objeto da classe type_info que contém informações sobre o tipo de seu operando. 
+A função-membro name retorna uma string baseada em ponteiro (char *) que contém o nome do tipo do argumento passado 
+para typeid (porém, não há garantias sobre a qualidade do resultado dessa função!). Veja um exemplo nos slides 99 a 
+102.
