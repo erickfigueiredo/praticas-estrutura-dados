@@ -88,7 +88,7 @@ public:
 		return dataFirst->data == NULL);
 	}
 	*/
-	int size() const {return dataSize;}; // na STL List, a funcao size() calcula o tamanho da lista dinamicamente (exercicio: qual a ordem de complexidade?)
+	//int size() const {return dataSize;}; // na STL List, a funcao size() calcula o tamanho da lista dinamicamente (exercicio: qual a ordem de complexidade?)
 
 private:
 	Node<T> *dataFirst, * dataLast;
