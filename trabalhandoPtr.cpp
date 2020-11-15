@@ -1,8 +1,8 @@
 //Alguns exemplos de uso de ponteiros, ->, etc
 class Data {
 public:
-    Int x;
-    Int * y;
+    int x;
+    int * y;
     …..
     void f() {
 	this->x = 10; //equivalente ao dptr->x = 10 (o “this” no objeto “d” aponta para o mesmo endereco que dptr na main abaixo aponta… ele é como se fosse um ponteiro que aponta para o proprio objeto).
@@ -11,7 +11,7 @@ public:
     }
 };
 
-Int main() {
+int main() {
 	Data d;
 	Data *dptr = &d;
 	Data **dptr2 = &dptr;

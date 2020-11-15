@@ -89,7 +89,6 @@ void etapa2() {
 		cout << "Consistente" << endl;
 	}else{
 		cout << "inconsistente" << endl;
-
 	}
 }
 
