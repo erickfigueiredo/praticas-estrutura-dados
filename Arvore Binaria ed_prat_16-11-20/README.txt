@@ -1,5 +1,5 @@
 1- Não se trata de uma arvoré de pesquisa, pois não segue a organização de que filhos maiores
-de um respectivo nó se localizam a esquerda e os menores a direita.
+de um respectivo nó se localizam a direita e os menores a esquerda.
 
 2- 
 
