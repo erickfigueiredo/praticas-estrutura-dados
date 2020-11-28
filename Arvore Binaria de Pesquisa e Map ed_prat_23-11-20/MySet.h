@@ -46,7 +46,7 @@ public:
 	MySet &operator=(const MySet &other);
 
 private:
-	Node<T> *root;
+	Node<T> *root = nullptr;
 	int size_;
 
 	//funcoes auxiliares...
@@ -367,20 +367,20 @@ MySet<T> &MySet<T>::operator=(const MySet<T> &other)
 }
 
 template <class T>
-Node<T> *MySet<T>::populate(const Node<T> *root, Node<T> *parent) const
+Node<T> *MySet<T>::populate(const Node<T> *other, Node<T> *parent) const
 {
 	//Aplica-se pre ordem
-	if (!other)
-		return;
+	if (other == nullptr)
+		return nullptr;
 
 	Node<T> *aux = new Node<T>(other->elem);
 
 	aux->parent = parent;
 
-	populate(root->left, aux);
-	populate(root->right, aux);
+	aux->left = populate(other->left, aux);
+	aux->right = populate(other->right, aux);
 
-	return ans;
+	return aux;
 }
 
 #endif

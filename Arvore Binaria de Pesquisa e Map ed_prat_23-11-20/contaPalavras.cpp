@@ -2,37 +2,38 @@
 #include <cstring>
 
 #include "MyVecNewIterator.h"
+#include "MySet.h"
 using namespace std;
 
 int main(int argc, char **argv)
 {
     //IMPORTANTE: argv[0] sempre guarda o nome do programa
-    string opcao = argv[1];
 
-    string palavra;
     int numPalavras = 0;
+    string palavra;
 
-    if (opcao == "myvec")
+    if (argv[1] == "myvec")
     {
         MyVec<string> frase;
+        bool flag = true;
 
-        bool insere = true;
         while (cin >> palavra)
         {
             numPalavras++;
-
             for (int i = 0; i < frase.size(); i++)
                 if (frase[i] == palavra)
                 {
-                    insere = false;
+                    flag = false;
                     break;
                 }
 
-            if (insere)
+            if (flag)
                 frase.push_back(palavra);
 
-            insere = true;
+            flag = true;
         }
+
+        cout << numPalavras << " " << frase.size() << endl;
     }
     else
     {
@@ -43,9 +44,9 @@ int main(int argc, char **argv)
             numPalavras++;
             frase.insert(palavra);
         }
-    }
 
-    cout << numPalavras << " " << frase.size() << endl;
+        cout << numPalavras << " " << frase.size() << endl;
+    }
 
     return 0;
 }
